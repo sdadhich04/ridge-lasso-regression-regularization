@@ -11,6 +11,12 @@ University of Washington. See [Results](#results) for the actual numbers
 this notebook produced — nothing here is a target or textbook value, it's
 what running this code returned.
 
+> **⚠️ This notebook will not run out of the box.** It depends on
+> `home_data.csv`, a course-provided dataset not included in this repo
+> (not redistributed — see Known Limitations). Cloning and running
+> immediately will fail on the first data-loading cell with
+> `FileNotFoundError` until you supply that file yourself.
+
 ## What this does
 
 1. Engineers polynomial features from the base housing features (squared
@@ -65,6 +71,12 @@ penalty type.
 
 ## Running this code
 
-Requires Python with `pandas`, `numpy`, `scikit-learn`, and `matplotlib`.
-Open `ridge_lasso_regression.ipynb` in Jupyter, supply `home_data.csv` in
-the same directory, and run all cells top to bottom.
+```
+pip install -r requirements.txt
+```
+
+Then supply `home_data.csv` in the same directory (see the limitation
+above), open `ridge_lasso_regression.ipynb` in Jupyter, and run all cells
+top to bottom. Dependency versions in `requirements.txt` are unpinned —
+the exact versions originally used weren't captured, so this lists package
+names only, not a locked environment.
